@@ -1,0 +1,204 @@
+<!--
+ _ _ _                  _
+| (_) | _____  __ _ ___| |_ ___  _ __ ___
+| | | |/ / _ \/ _` / __| __/ _ \| '__/ _ \
+| | |   <  __/ (_| \__ \ || (_) | | |  __/_
+|_|_|_|\_\___|\__,_|___/\__\___/|_|  \___(_)
+
+(c) 2013. @likeastore blog theme. BSD License
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="shortcut icon" href="{Favicon}">
+	<link rel="apple-touch-icon" href="{PortraitURL-128}"/>
+	<link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+	{block:Description}
+	<meta name="description" content="{MetaDescription}" />
+	{/block:Description}
+
+	<meta name='image:Logo' content='http://static.tumblr.com/eumlldm/vXBmqyonf/likeablog-green.png' />
+	<meta name='text:App Url' content='http://app.likeastore.com' />
+	<meta name='text:Twitter Account Name' content='likeastore' />
+	<meta name='text:Disqus Shortname' content='' />
+	<meta name='text:Google Analytics ID' content='' />
+
+	<title>{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}</title>
+
+	<link rel="stylesheet" type="text/css" href="http://static.tumblr.com/eumlldm/Yntmr0fz1/style.css">
+	<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Lato:300,400,700|Bitter:400,700'>
+
+	<style type="text/css">
+		{CustomCSS}
+	</style>
+
+	<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="container">
+		<div class="title">
+			{block:IfLogoImage}<a href="/" class="logo"><img src="{image:Logo}" width="230" alt="{Title}"></a>{/block:IfLogoImage}
+			{block:IfNotLogoImage}<a href="/">{Title}</a>{/block:IfNotLogoImage}
+		</div>
+
+		{block:Description}
+			<div class="description">{Description}</div>
+		{block:Description}
+
+		<div class="nav">
+			{block:HasPages}
+				{block:Pages}<li><a href="{URL}">{Label}</a></li>{block:Pages}
+			{/block:HasPages}
+			{block:IfAppUrl}<li><a href="{text: App Url}">Go to app</a></li>{/block:IfAppUrl}
+			{block:AskEnabled}<li><a href="/ask">Ask</a></li>{/block:AskEnabled}
+			{block:SubmissionsEnabled}<li><a href="/submit">Submit</a></li>{/block:SubmissionsEnabled}
+			<li><a href="/archive">Archive</a></li>
+			{block:IfTwitterAccountName}<li><a href="http://twitter.com/{text:Twitter Account Name}">Twitter</a></li>{/block:IfTwitterAccountName}
+		</div>
+
+		{block:Posts}
+		<div class="posts">
+			{block:Photo}
+				<div class="media">{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}</div>
+				{block:Caption}<div class="photoCaption">{Caption}</div>{/block:Caption}
+			{/block:Photo}
+
+			{block:Photoset}
+				<div class="media">{Photoset-500}</div>
+				{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+			{/block:Photoset}
+
+			{block:Audio}
+				<div class="audioleft">
+					<div class="audioc">
+						<div class="audio">{AudioPlayerBlack}</div>
+					</div>
+				</div>
+
+				<div class="audioright">
+					<div class="audioCaption">{block:Artist}<b>{Artist}</b>{/block:Artist}<p>&mdash;{block:TrackName}{TrackName}{/block:TrackName}</p></div>
+				</div>
+
+				<div class="audioClear"></div>
+				<div class="audioContainer">{block:Caption}{Caption}{/block:Caption}</div>
+			{/block:Audio}
+
+			{block:Video}
+				<div class="media">{Video-500}</div>
+				{block:Caption}<div>{Caption}</div>{/block:Caption}
+			{/block:Video}
+
+			{block:Answer}
+				<h3>{Asker} asked: {Question}</h3>
+				{Answer}
+			{/block:Answer}
+		</div>
+
+
+		<div class="header-posts">
+			{block:Text}
+				{block:Title}<h2><a href="{Permalink}" class="post-title">{Title}</a></h2>{/block:Title}
+				{Body}
+			{/block:Text}
+
+			{block:Link}
+				<h2><a href="{URL}" {Target}>{Name} &rarr;</a></h2>
+				{block:Description}<div>{Description}</div>{/block:Description}
+			{/block:Link}
+
+			{block:Quote}
+				<div class="quote">{Quote}</div>
+				{block:Source}<div id="quoteSource"><p>&mdash; {Source}</p></div>{/block:Source}
+			{/block:Quote}
+
+			{block:Chat}
+				{block:Title}<h2>{Title}</h2>{/block:Title}
+				 <ul class="chat">
+					{block:Lines}
+					<li>{block:Label}<strong>{Label}</strong>{/block:Label} {Line}</li>
+					{/block:Lines}
+				 </ul>
+			{/block:Chat}
+		</div>
+
+		{block:HasTags}
+		<ul class="tags">
+			{block:Tags}
+			<li><a href="{TagURL}">#{Tag}</a></li>
+			{/block:Tags}
+		</ul>
+		{/block:HasTags}
+
+		<div class="meta">
+			{block:Date}<a href="{Permalink}">{DayOfMOnth}{DayOfMonthSuffix} {ShortMonth} {Year}</a>{/block:Date}{block:NoteCount} / <a href="{Permalink}#notes">{NoteCountWithLabel}</a>{/block:NoteCount}
+		</div>
+
+		{block:PostNotes}
+			{PostNotes}
+		{/block:PostNotes}
+
+		{block:Permalink}
+			{block:IfDisqusShortname}
+			<div id="disqus_thread"></div>
+			<script type="text/javascript">
+				var disqus_shortname = '{text:Disqus Shortname}';
+				var disqus_url = '{Permalink}';
+				var disqus_title = '{block:PostTitle}{PostTitle}{/block:PostTitle}';
+
+				/* * * DON'T EDIT BELOW THIS LINE * * */
+				(function() {
+					var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+					dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+					(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+				})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+			{/block:IfDisqusShortname}
+		{/block:Permalink}
+
+		{/block:Posts}
+
+
+		{block:Pagination}
+			<div class="pagination">
+			{block:PreviousPage}
+				<a href="{PreviousPage}">&#171; Previous</a>
+			{/block:PreviousPage} {block:NextPage}
+				<a href="{NextPage}">Next &#187;</a>
+			{/block:NextPage}
+			</div>
+		{/block:Pagination}
+
+		<footer class="footer">
+			<div class="left">&copy; 2013 <a href="https://likeastore.com">likeastore.com</a> | Powered by <a href="http://tumblr.com">Tumblr</a></div>
+
+			<div class="right">
+				<a href="https://twitter.com/likeastore" class="twitter-follow-button" data-show-count="false">Follow @likeastore</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+				</script>
+			</div>
+		</footer>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+	{block:IfGoogleAnalyticsID}
+	<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', '{text:Google Analytics ID}']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	</script>
+	{/block:IfGoogleAnalyticsID}
+</body>
+</html>
