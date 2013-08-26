@@ -15,10 +15,10 @@ body {
 	background-color: #fff;
 	border-top: 5px solid #ecf0f1;
 	color: #555;
-	font: 13px/22px 'Lato','Helvetica Neue',Arial,sans-serif;
-	width: 100%;
+	font: 13px/22px Lato,'Helvetica Neue',Arial,sans-serif;
 	overflow-x: hidden;
 	overflow-y: scroll;
+	width: 100%;
 }
 
 ol,ul {
@@ -84,8 +84,8 @@ a img {
 
 .container {
 	margin: 35px auto;
-	width: 500px;
 	overflow: hidden;
+	width: 600px;
 }
 
 .logo {
@@ -118,17 +118,17 @@ h1,h2,h3,h4,h5 {
 }
 
 h1 {
-	font-size: 32px;
+	font-size: 26px;
 	line-height: 48px;
 }
 
 h2 {
-	font-size: 24px;
+	font-size: 20px;
 	line-height: 38px;
 }
 
 h3 {
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 28px;
 }
 
@@ -183,9 +183,9 @@ p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset {
 
 .description {
 	border-bottom: #eee 1px solid;
+	line-height: 1;
 	margin-bottom: 10px;
 	padding-bottom: 20px;
-	line-height: 1;
 	text-align: center;
 }
 
@@ -193,8 +193,8 @@ p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset {
 	border-bottom: #eee 1px solid;
 	font-size: 11px;
 	font-weight: 700;
-	padding-bottom: 10px;
 	line-height: 1;
+	padding-bottom: 10px;
 	text-align: center;
 	text-transform: uppercase;
 }
@@ -214,6 +214,16 @@ p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset {
 
 .header-posts {
 	padding: 0;
+}
+
+.header-posts blockquote {
+	border-left: 5px solid #ddd;
+	font-style: italic;
+	padding-left: 15px;
+}
+
+.header-posts p {
+	text-align: justify;
 }
 
 .header-posts img,.posts img {
@@ -344,15 +354,16 @@ code,pre,pre code {
 }
 
 @media (max-width: 500px) {
-	.container {
-		width: 90%;
-	}
+ .container {
+ 	width: 90%;
+ }
 
-	.description,.footer {
-		font-size: 11px;
-	}
+ .description,.footer {
+ 	font-size: 11px;
+ }
 
-	.nav {
-		font-size: 10px;
-	}
+ .nav {
+ 	font-size: 10px;
+ }
+
 }

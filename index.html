@@ -20,14 +20,13 @@
 	{/block:Description}
 
 	<meta name='image:Logo' content='http://static.tumblr.com/eumlldm/vXBmqyonf/likeablog-green.png' />
-	<meta name='text:App Url' content='http://app.likeastore.com' />
 	<meta name='text:Twitter Account Name' content='likeastore' />
 	<meta name='text:Disqus Shortname' content='' />
 	<meta name='text:Google Analytics ID' content='' />
 
 	<title>{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}</title>
 
-	<link rel="stylesheet" type="text/css" href="http://static.tumblr.com/eumlldm/Yntmr0fz1/style.css">
+	<link rel="stylesheet" type="text/css" href="http://static.tumblr.com/eumlldm/Tobms5qgv/style.css">
 	<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Lato:300,400,700|Bitter:400,700'>
 
 	<style type="text/css">
@@ -53,7 +52,7 @@
 			{block:HasPages}
 				{block:Pages}<li><a href="{URL}">{Label}</a></li>{block:Pages}
 			{/block:HasPages}
-			{block:IfAppUrl}<li><a href="{text: App Url}">Go to app</a></li>{/block:IfAppUrl}
+			<li><a href="http://app.likeastore.com">Go to app</a></li>
 			{block:AskEnabled}<li><a href="/ask">Ask</a></li>{/block:AskEnabled}
 			{block:SubmissionsEnabled}<li><a href="/submit">Submit</a></li>{/block:SubmissionsEnabled}
 			<li><a href="/archive">Archive</a></li>
@@ -101,7 +100,7 @@
 
 		<div class="header-posts">
 			{block:Text}
-				{block:Title}<h2><a href="{Permalink}" class="post-title">{Title}</a></h2>{/block:Title}
+				{block:Title}<h1><a href="{Permalink}" class="post-title">{Title}</a></h1>{/block:Title}
 				{Body}
 			{/block:Text}
 
