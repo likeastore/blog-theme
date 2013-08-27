@@ -113,7 +113,7 @@ html {
 }
 
 h1,h2,h3,h4,h5 {
-	font-family: 'Lato','Helvetica Neue',"Arial",sans-serif;
+	font-family: 'Bitter',Georgia,serif;
 	font-weight: 400;
 }
 
@@ -206,10 +206,6 @@ p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset {
 
 .posts {
 	padding-top: 40px;
-}
-
-.post-title {
-	font-family: 'Bitter',Georgia,serif;
 }
 
 .header-posts {
