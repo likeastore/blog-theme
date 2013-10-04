@@ -15,7 +15,7 @@ body {
 	background-color: #fff;
 	border-top: 5px solid #ecf0f1;
 	color: #555;
-	font: 13px/22px Lato,'Helvetica Neue',Arial,sans-serif;
+	font: 15px/24px Lato,'Helvetica Neue',Arial,sans-serif;
 	overflow-x: hidden;
 	overflow-y: scroll;
 	width: 100%;
@@ -84,7 +84,7 @@ a img {
 
 .container {
 	margin: 35px auto;
-	width: 510px;
+	width: 650px;
 }
 
 .logo {
@@ -160,6 +160,10 @@ li {
 	margin-left: 0;
 }
 
+strong {
+	font-weight: 700;
+}
+
 p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset {
 	margin: 0 0 15px;
 }
@@ -180,8 +184,15 @@ p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset {
 	color: #444;
 }
 
+.post-title {
+	display: inline-block;
+	color: #333;
+	margin-bottom: 15px;
+}
+
 .description {
 	border-bottom: #eee 1px solid;
+	font-size: 14px;
 	line-height: 1;
 	margin-bottom: 10px;
 	padding-bottom: 20px;
@@ -230,13 +241,13 @@ p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset {
 	vertical-align: middle;
 }
 
-.header-posts p a {
+.header-posts a {
 	color: #ff3535;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
-.header-posts p a:hover {
-	text-decoration: underline;
+.header-posts a:hover {
+	text-decoration: none;
 }
 
 .header-posts a.read_more {
