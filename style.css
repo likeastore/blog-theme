@@ -84,7 +84,7 @@ a img {
 
 .container {
 	margin: 35px auto;
-	width: 650px;
+	width: 630px;
 }
 
 .logo {
@@ -184,10 +184,15 @@ p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset {
 	color: #444;
 }
 
-.post-title {
-	display: inline-block;
+.header-posts .post-title {
 	color: #333;
-	margin-bottom: 15px;
+	display: inline-block;
+	line-height: 36px;
+	text-decoration: none;
+}
+
+.header-posts iframe.twitter-tweet {
+	margin: 30px 0 35px !important;
 }
 
 .description {
@@ -236,7 +241,7 @@ p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset {
 	border: 2px solid #e9e9e9;
 	box-shadow: 6px 6px 0 #ecf0f1;
 	height: auto;
-	margin-bottom: 15px;
+	margin: 15px 0 25px;
 	max-width: 100%;
 	vertical-align: middle;
 }
@@ -246,14 +251,13 @@ p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset {
 	text-decoration: underline;
 }
 
-.header-posts a:hover {
-	text-decoration: none;
-}
-
 .header-posts a.read_more {
 	color: #1abc9c;
-	font-weight: 700;
 	text-decoration: underline;
+}
+
+.header-posts a:hover,.header-posts a.read_more:hover {
+	text-decoration: none;
 }
 
 .header-posts p ul,.header-posts ul {
@@ -274,13 +278,10 @@ code,pre,pre code {
 .meta {
 	border-bottom: #eee 1px solid;
 	color: #bbb;
+	font-size: 13px;
 	margin-top: 10px;
 	padding-bottom: 20px;
 	text-align: left;
-}
-
-.meta a {
-	color: #bbb;
 }
 
 .quote {
@@ -301,8 +302,9 @@ code,pre,pre code {
 	margin-top: 10px;
 }
 
-.tags a {
+.tags a,.meta a {
 	color: #bbb;
+	font-size: 13px;
 }
 
 .tags ul {
@@ -316,9 +318,14 @@ code,pre,pre code {
 }
 
 .footer {
+	font-size: 13px;
 	padding-bottom: 5px;
 	padding-top: 20px;
 	text-align: center;
+}
+
+.footer iframe.twitter-follow-button {
+	margin-top: 5px !important;
 }
 
 .notes {
@@ -362,16 +369,15 @@ code,pre,pre code {
 }
 
 @media (max-width: 500px) {
- .container {
- 	width: 90%;
- }
+	.container {
+		width: 90%;
+	}
 
- .description,.footer {
- 	font-size: 11px;
- }
+	.description,.footer {
+		font-size: 11px;
+	}
 
- .nav {
- 	font-size: 10px;
- }
-
+	.nav {
+		font-size: 10px;
+	}
 }
