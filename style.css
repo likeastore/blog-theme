@@ -362,9 +362,17 @@ code,pre,pre code {
 	text-align: center;
 }
 
+.social-buttons {
+	margin-top: 15px;
+}
+
+#disqus_thread {
+	margin-top: 20px;
+}
+
+.social-buttons,
 #disqus_thread {
 	border-bottom: #eee 1px solid;
-	margin-top: 20px;
 	padding-bottom: 10px;
 }
 
