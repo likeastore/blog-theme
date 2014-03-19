@@ -234,7 +234,7 @@ p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset {
 }
 
 .header-posts p {
-	text-align: justify;
+	text-align: left;
 }
 
 .header-posts img,.posts img {
@@ -388,6 +388,12 @@ code,pre,pre code {
 #disqus_thread {
 	border-bottom: #eee 1px solid;
 	padding-bottom: 10px;
+}
+
+.social-buttons .fb-like {
+	display: inline-block !important;
+	vertical-align: top !important;
+	line-height: 20px !important;
 }
 
 @media (max-width: 500px) {
